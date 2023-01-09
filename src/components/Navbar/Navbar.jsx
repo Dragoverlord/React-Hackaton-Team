@@ -9,18 +9,16 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { useAuth } from "../../contexts/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import { ADMIN } from "../../helpers/consts";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useCart } from "../../contexts/cartContext";
-import ConstructionIcon from "@mui/icons-material/Construction";
+import "./Navbar.css"
+import BurgerMenu from "./burgerMenu/BurgerMenu";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -184,17 +182,20 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "#1E434c" }}>
+      <BurgerMenu/>
       <AppBar position="static" sx={{ backgroundColor: "#1E434c" }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuBookIcon />
-          </IconButton>
+          <Link to="/">
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <MenuBookIcon />
+            </IconButton>
+          </Link>
           <Typography
             variant="h6"
             noWrap
@@ -205,15 +206,17 @@ export default function Navbar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
-
+          
           <Box sx={{ display: "flex", gap: "12px" }}>
             {pages.map((item) => (
-              <Link to={item.link} >
-                <Typography sx={{ color: "white",fontSize: "20px" }}>{item.name}</Typography>
+              <Link to={item.link} className="Nav-bar">
+                <Typography sx={{ color: "white", fontSize: "20px" }}>
+                  {item.name}
+                </Typography>
               </Link>
             ))}
-          </Box>       
-          <Box sx={{ flexGrow: 1 }} />    
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
           {user ? <Box>{user.email}</Box> : <Box>Не авторизован</Box>}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
