@@ -115,34 +115,34 @@ const SideBar = () => {
             >
               <FormControlLabel value="all" control={<Radio />} label="Все" />
               <FormControlLabel
-                value="100"
+                value={100}
                 control={<Radio />}
                 label="до 99 сом"
               />
               <FormControlLabel
-                value="199"
+                value={200}
                 control={<Radio />}
                 label="до 199 сом"
               />
               <FormControlLabel
-                value="299"
+                value={300}
                 control={<Radio />}
                 label="до 299 сом"
               />
               <FormControlLabel
-                value="499"
+                value={500}
                 control={<Radio />}
                 label="до 499 сом"
               />
               <FormControlLabel
-                value="999"
+                value={1000}
                 control={<Radio />}
                 label="до 999 сом"
               />
               <FormControlLabel
-                value="1999"
+                value={2100}
                 control={<Radio />}
-                label="до 1999 сом"
+                label="до 2100 сом"
               />
             </RadioGroup>
           </FormControl>

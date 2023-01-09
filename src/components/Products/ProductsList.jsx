@@ -12,7 +12,7 @@ const ProductsList = () => {
 
   const [page, setPage] = useState(1);
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 9;
 
   const count = Math.ceil(products.length / itemsPerPage);
 
@@ -57,7 +57,7 @@ const ProductsList = () => {
       <Stack spacing={2}>
         <Pagination
           sx={{ m: 2 }}
-          color="secondary"
+          color="primary"
           count={count}
           page={page}
           onChange={handleChange}
