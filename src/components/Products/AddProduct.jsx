@@ -26,7 +26,7 @@ const AddProduct = () => {
         }
         fullWidth
         id="outlined-basic"
-        label="Name"
+        label="Название"
         variant="outlined"
         name="name"
         sx={{ bgcolor: "wheat" }}
@@ -38,7 +38,7 @@ const AddProduct = () => {
         }
         fullWidth
         id="outlined-basic"
-        label="Description"
+        label="Описание"
         variant="outlined"
         name="description"
         sx={{ bgcolor: "wheat" }}
@@ -50,7 +50,7 @@ const AddProduct = () => {
         }
         fullWidth
         id="outlined-basic"
-        label="Price"
+        label="Цена"
         variant="outlined"
         name="price"
         sx={{ bgcolor: "wheat" }}
@@ -62,7 +62,7 @@ const AddProduct = () => {
         }
         fullWidth
         id="outlined-basic"
-        label="Picture"
+        label="Картинка"
         variant="outlined"
         name="picture"
         sx={{ bgcolor: "wheat" }}
@@ -74,7 +74,7 @@ const AddProduct = () => {
         }
         fullWidth
         id="outlined-basic"
-        label="Type"
+        label="Жанр"
         variant="outlined"
         name="type"
         sx={{ bgcolor: "wheat" }}
