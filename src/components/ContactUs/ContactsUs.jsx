@@ -8,7 +8,7 @@ const ContactsUs = () => {
   return (
     <Box>
       <div>
-        
+
       </div>
     </Box>
   );
