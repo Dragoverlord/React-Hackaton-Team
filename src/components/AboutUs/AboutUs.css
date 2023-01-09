@@ -16,12 +16,12 @@
     flex-direction: column;
     justify-content: space-around;
     width: 60%;
-    height: 700px;
+    height: 800px;
     font-size: 20px;
 }
 .Sidebar-About {
     width: 400px;
-    height: 800px;
+    height: 900px;
     margin: 50px 0;
 }
 
