@@ -1,13 +1,16 @@
 import React from "react";
 import "./AboutUs.css";
+import logo from "../../pages/Image/logo.jpg";
 
 const AboutUs = () => {
   return (
     <div className="AboutUs">
       <div className="Sidebar-About">
+      <img src={logo} alt="logo" width="120px"/><br/>
         <span>Главная О компании</span>
         <h2>О компании</h2>
         <p>
+        
           <h3>Новости</h3>
           <span>Все новости</span>
         </p>
@@ -26,6 +29,7 @@ const AboutUs = () => {
         <p>поступление Новой Статьи про 1984 </p>
       </div>
       <div className="Content-About">
+        
         <p>
           Ti-Tan Books – это современный магазин товаров для Книг и Комиксов
           в Бишкеке. Мы представляем широкий выбор товаров для самых
