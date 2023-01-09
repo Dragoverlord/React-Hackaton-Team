@@ -50,6 +50,7 @@ export const PayCard = () => {
           <input type="text" name="email" placeholder="Почта (Emali)" />
         </div>
         <div>
+          
           <input type="text" name="number" placeholder="Номер телефона" />
         </div>
         <div>
