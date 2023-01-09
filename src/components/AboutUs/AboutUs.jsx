@@ -1,10 +1,13 @@
 import React from "react";
 import "./AboutUs.css";
+import logo from "../../pages/Image/logo.png"
 
 const AboutUs = () => {
   return (
     <div className="AboutUs">
       <div className="Sidebar-About">
+        <img src={logo} width="120px" alt="" />
+        <br />
         <span>Главная О компании</span>
         <h2>О компании</h2>
         <p>
