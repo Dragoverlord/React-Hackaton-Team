@@ -8,7 +8,6 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -25,7 +24,7 @@ function Copyright(props) {
       align="center"
       {...props}
     >
-      {"Copyright © 70-80 Books "}
+      {"Copyright © Ti-Tan Books "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -62,10 +61,6 @@ export default function Auth() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
   };
 
   return (
@@ -134,7 +129,7 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleLogin();
-                  navigate("/");
+                  // navigate("/");
                 }}
               >
                 Войти
@@ -147,7 +142,7 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleSignUp();
-                  navigate("/");
+                  // navigate("/");
                 }}
               >
                 Регистрация
