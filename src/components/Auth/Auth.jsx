@@ -131,7 +131,7 @@ export default function Auth() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 ,backgroundColor: "rgb(108, 35, 108);"}}
+                sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleLogin();
                   navigate("/");
@@ -144,7 +144,7 @@ export default function Auth() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 ,backgroundColor: "rgb(108, 35, 108);"}}
+                sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleSignUp();
                   navigate("/");
@@ -156,7 +156,7 @@ export default function Auth() {
 
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2" color="rgb(108, 35, 108)">
+                <Link href="#" variant="body2" color="#1E434c">
                   Забыли пароль?
                 </Link>
               </Grid>
@@ -165,7 +165,7 @@ export default function Auth() {
                   <Link
                     href="#"
                     variant="body2"
-                   sx={{color:"rgb(108, 35, 108);"}}
+                   sx={{color:"#1E434c"}}
                     onClick={() => setHasAccount(!hasAccount)}
                   >
                     {"У вас нет аккаунта? Создать"}
@@ -174,7 +174,7 @@ export default function Auth() {
                   <Link
                     href="#"
                     variant="body2"
-                    sx={{color:"rgb(108, 35, 108);"}}
+                    sx={{color:"#1E434c"}}
                     onClick={() => setHasAccount(!hasAccount)}
                   >
                     {"У вас есть аккаунт? Войти "}
