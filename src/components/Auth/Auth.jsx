@@ -129,7 +129,7 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleLogin();
-                  navigate("/");
+                  // navigate("/");
                 }}
               >
                 Войти
@@ -142,7 +142,7 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 ,backgroundColor: "#1E434c"}}
                 onClick={() => {
                   handleSignUp();
-                  navigate("/");
+                  // navigate("/");
                 }}
               >
                 Регистрация
