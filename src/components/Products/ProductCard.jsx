@@ -27,7 +27,7 @@ export default function ProductCard({ item }) {
   } = useAuth();
 
   return (
-    <Card sx={{ maxWidth: 345 ,borderRadius: "15px"}}>
+    <Card sx={{ maxWidth: 345 ,borderRadius: "15px" ,height: "fit-content"}}>
       <CardMedia
         sx={{ height: 500, cursor: "pointer" }}
         image={item.picture}
