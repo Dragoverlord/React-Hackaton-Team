@@ -52,6 +52,7 @@ const EditProduct = () => {
       />
       <TextField
         fullWidth
+        type="number"
         variant="outlined"
         name="price"
         id="outlined-basic"
