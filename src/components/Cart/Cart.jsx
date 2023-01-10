@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/cartContext";
-import { Button, IconButton } from "@mui/material";
+import { Box, Button, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
@@ -40,6 +40,15 @@ export default function Cart() {
   const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    getCart();
+  }, []);
+
+  const cartCleaner = () => {
+    localStorage.removeItem("cart");
+    getCart();
+  };
+
   return (
     <TableContainer component={Paper} sx={{ bgcolor: "wheat" }}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -51,7 +60,7 @@ export default function Cart() {
             <StyledTableCell align="right">Детали</StyledTableCell>
             <StyledTableCell align="right">Цена</StyledTableCell>
             <StyledTableCell align="right">Количество</StyledTableCell>
-            <StyledTableCell align="right">Сумма  </StyledTableCell>
+            <StyledTableCell align="right">Сумма </StyledTableCell>
             <StyledTableCell align="right">-</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -97,19 +106,39 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-      <Button
+      <Box
         sx={{
-          color: "black",
           display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "flex-end",
-        }}
-        onClick={() => {
-          navigate(`/paycard`);
+          justifyContent: "space-between"
         }}
       >
-        <AccountBalanceWalletIcon /> {cart?.totalPrice} сом
-      </Button>
+        <Button
+          sx={{
+            color: "black",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+          }}
+          onClick={() => {
+            navigate(`/paycard`);
+          }}
+        >
+          <AccountBalanceWalletIcon /> {cart?.totalPrice} сом
+        </Button>
+        <Button
+          sx={{
+            color: "black",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+          }}
+          onClick={() => {
+            cartCleaner();
+          }}
+        >
+          <DeleteForeverIcon />
+        </Button>
+      </Box>
     </TableContainer>
   );
 }
